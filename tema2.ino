@@ -62,7 +62,7 @@ void loop() {
     f = 0;
     
     // Formula exclusiva pentru LM35 (fara offset de -50.0)
-    int t = read_adc() * 110.0 / 1024.0 - 50.0;
+    int t = round(read_adc() * 110.0 / 1024.0 - 50.0);
     
     lcd.setCursor(0, 0);
     lcd.print("Temp=");
